@@ -33,9 +33,6 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-
-  /* outline: 2px solid red;
-outline-offset: -2px; */
 }
 
 /* reset start */
@@ -69,22 +66,6 @@ a {
 }
 /* reset end */
 
-/* CARD SET */
-.card-set {
-  height: calc(368 / 1170);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
-.card-set-item {
-  flex-basis: calc(
-    (100% - var(--indent) * (var(--items) - 1)) / (var(--items))
-  );
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);;
-}
-/* CARD SET */
 
 /*---------HEADER----------*/
 
@@ -333,7 +314,7 @@ a {
   padding-bottom: 94px;
 }
 
-.work-title {
+.work__title {
   margin-bottom: 50px;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -342,6 +323,53 @@ a {
 
   color: var(--primary-text-color);
 }
+
+
+.work__cardset {
+  height: calc(368 / 1170);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.work__cardset-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / (var(--items)));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  ;
+}
+
+.work__cardset-item:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.work__img-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work__img-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  font-style: normal;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  font-weight: 700;
+  height: 70px;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .worker-name {
   margin-bottom: 10px;
   font-style: normal;
@@ -363,36 +391,6 @@ a {
   background-color: var(--white-color);
   padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.card-set-item:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-.img-box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.img-text {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  width: 100%;
-  font-size: 14px;
-  font-style: normal;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
-  text-align: center;
-
-  font-weight: 700;
-  height: 70px;
-  color: var(--white-color);
-  background-color: rgba(47, 48, 58, 0.8);
 }
 
 .team {
@@ -932,7 +930,6 @@ a {
   box-sizing: border-box;
   margin-left: 40px;
   margin-right: 40px;
-  margin-bottom: 20px;
 
   width: 448px;
   height: 120px;
